@@ -3,20 +3,18 @@ import numpy as np
 import pandas as pd
 
 class HealthInsurance:
-    def __init__(self):
-
-        self.home_path= '' 
+    def __init__(self): 
         # annual premium
-        self.annual_premium_scaler = pickle.load(open(self.home_path + 'parameter/annual_premium_scaler.pkl', 'rb'))
+        self.annual_premium_scaler = pickle.load(open('parameter/annual_premium_scaler.pkl', 'rb'))
         
         # age scaler
-        self.age_scaler = pickle.load(open(self.home_path + 'parameter/age_scaler.pkl', 'rb'))
+        self.age_scaler = pickle.load(open('parameter/age_scaler.pkl', 'rb'))
         
         # region code
-        self.target_encode_region_code_scaler = pickle.load(open(self.home_path + 'parameter/target_encode_region_code.pkl', 'rb'))
+        self.target_encode_region_code_scaler = pickle.load(open('parameter/target_encode_region_code.pkl', 'rb'))
         
         # policy sales channel
-        self.fe_policy_sales_channel_scaler = pickle.load(open(self.home_path + 'parameter/fe_policy_sales_channel.pkl', 'rb'))
+        self.fe_policy_sales_channel_scaler = pickle.load(open('parameter/fe_policy_sales_channel.pkl', 'rb'))
 
         # vintage
         # this feature was not chosen
